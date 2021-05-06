@@ -1,3 +1,4 @@
 # GraphQL Job Board
 
-Sample application used in the GraphQL by Example course.
+Job board application used in the GraphQL by Udemy course.
+https://www.udemy.com/course/graphql-by-example/
