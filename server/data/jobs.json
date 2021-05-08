@@ -16,5 +16,29 @@
     "companyId": "SJV0-wdOM",
     "title": "Full-Stack Developer",
     "description": "We are looking for a Full-Stack Developer familiar with Node.js, Express, and React."
+  },
+  {
+    "id": "SkNVKS4uu",
+    "companyId": "HJRa-DOuG",
+    "title": "UI/UX Designer",
+    "description": "Design our applications' UI."
+  },
+  {
+    "id": "SkCycHVOu",
+    "companyId": "HJRa-DOuG",
+    "title": "Senior UI/UX Designer",
+    "description": "Improve our applications' UI."
+  },
+  {
+    "id": "SyxGrLN_O",
+    "companyId": "SJV0-wdOM",
+    "title": "Product owner",
+    "description": "plan solutions and communicate with engineers"
+  },
+  {
+    "id": "B1nJqUNO_",
+    "companyId": "SJV0-wdOM",
+    "title": "DevOps Engineer",
+    "description": "need to deploy apps"
   }
 ]

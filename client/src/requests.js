@@ -29,6 +29,20 @@ export async function loadJobs(){
     return await makeRequest(endpointURL, query, {}, 'jobs');
 }
 
+export async function createJob(input) {
+    const mutation = `mutation CreateJob($input: CreateJobInput){
+        job: createJob(input: $input) {
+          id,
+          title,
+          company {
+            id
+            name
+          }
+        }
+      }`;
+    return await makeRequest(endpointURL, mutation, {input}, 'job')
+}
+
 export async function loadCompany(id) {
     const query = `query CompanyQuery($id: ID!) {
                         company(id: $id) {
