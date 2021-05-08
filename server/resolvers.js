@@ -4,11 +4,15 @@ const Query = {
     jobs: () => db.jobs.list(),
     company: (root, {id}) => db.companies.get(id),
     companies: () => db.companies.list(),
+    user: (root, {id}) => db.users.get(id),
 };
 
 const Mutation = {
-    createJob: (root, {input}) => {
-        const id = db.jobs.create(input);
+    createJob: (root, {input}, context) => {
+        if (!context.user) {
+            return new Error('Unarthorized')
+        }
+        const id = db.jobs.create({...input, companyId: context.user.companyId});
         return db.jobs.get(id);
     }
 };
@@ -21,5 +25,9 @@ const Job = {
     company: (job) => db.companies.get(job.companyId)
 };
 
-module.exports = { Query, Mutation, Job, Company };
+const User = {
+    company: (user) => db.companies.list().filter(company => company.id === user.companyId)
+}
+
+module.exports = { Query, Mutation, Job, Company, User };
 
